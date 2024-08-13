@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <a href="/"> Home</a> </h1>
+    <h1> <a href="/first_app/about/"> First_App/ About</a> </h1>
+    <h1> <a href="/first_app/contact/"> First_App/ Contact</a> </h1>
+
+    <h1>This is About Page</h1>
+
+    <h1>Author : {{author}}</h1>
+    <h1>Age : {{age}}</h1>
+    <h1>{{list}}</h1>
+    <h1>{{ list | join:" - " }}</h1>
+    <h1>{{ birthday | date:"D d M Y" }}</h1>
+
+    <!-- Conditional Statement -->
+    {% if age >= 18 %}
+        <h3>You will get driving license</h3>
+    {% elif age >= 10 and age <= 17 %}
+        <h3>You wil not get driving license</h3>
+    {% else %}
+        <h3>You're a child</h3>
+    {% endif %}
+
+    {% for i in Courses %}
+        <h3>{{i.id}} {{i.name}} {{i.fees}}</h3>
+    {% endfor %}
+
+</body>
+</html>
