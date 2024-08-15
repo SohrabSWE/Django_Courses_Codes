@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{{block.super}}
+    <h1>This is Home Page</h1>
+    <img src="{% static 'bird1.jpg' %}" alt="bird1 img">
+{% endblock %}
